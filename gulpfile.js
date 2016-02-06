@@ -1,3 +1,6 @@
+// taken from a tutorial I used to learn React:
+// https://github.com/wesbos/React-For-Beginners-Starter-Files
+//
 var source = require('vinyl-source-stream');
 var gulp = require('gulp');
 var less = require('gulp-less');
@@ -75,7 +78,7 @@ function handleErrors() {
 
 function buildScript(file, watch) {
   var props = {
-    entries: ['./scripts/' + file],
+    entries: ['./' + file],
     debug : true,
     transform:  [babelify.configure({stage : 0 })]
   };
@@ -108,11 +111,18 @@ function buildScript(file, watch) {
 }
 
 gulp.task('scripts', function() {
-  return buildScript('main.js', false); // this will run once because we set watch to false
+  return buildScript('scripts/main.js', false); // this will run once because we set watch to false
 });
 
 // run 'scripts' task first, then watch for future changes
 gulp.task('default', ['images','less','scripts','browser-sync'], function() {
-  gulp.watch('less/*.less', ['less']); // gulp watch for stylus changes
-  return buildScript('main.js', true); // browserify watch for JS changes
+  gulp.watch('less/*.less', ['less']); // gulp watch for less changes
+  return buildScript('scripts/main.js', true); // browserify watch for JS changes
 });
+
+/*
+gulp.task('default', ['images','less','scripts','browser-sync'], function() {
+  //gulp.watch('less/*.less', ['less']); // gulp watch for less changes
+  return buildScript('less/test.less', true); // browserify watch for JS changes
+});
+*/
