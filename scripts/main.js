@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 
 
 var App = React.createClass({
-  getInitialState: function() {
+  getInitialState : function() {
     return  {
       expanded : false
     }
@@ -13,6 +13,29 @@ var App = React.createClass({
       expanded : !this.state.expanded,
     })
   },
+  render : function() {
+    return (
+      <ThreeColumnLayout />
+    )
+  }
+});
+var LeftListItem = React.createClass({
+  render: ()=> {
+    return (
+      <li className="left-menu-item">
+      </li>
+    )
+  }
+});
+var SinglePanelOnly = React.createClass({
+  render : function() {
+    return (
+      <div className=''>
+      </div>
+    )
+  }
+});
+var ThreeColumnLayout = React.createClass({
   render : function() {
     return (
       <div className="react-wrapper">
@@ -36,7 +59,7 @@ var App = React.createClass({
         </header>
         <div className='main-content row'>
             <div className='left-menu col-xs-4 col-md-2 col-md-offset-1 col-lg-2'>
-              <ul>
+              <ul className="nav nav-stacked">
                 <li>Video</li>
                 <li>Quick Review</li>
                 <li>Interactive Lyrics</li>
@@ -56,34 +79,23 @@ var App = React.createClass({
                 <div className='right-panel col-xs-1 col-md-4'>
                   <span className='image-browser'></span>
                   <span className='pagination'>1 of 10</span>
-                  <button className='button-toggle-fullscreen'>Expand</button>
+                  <button className='button-toggle-fullscreen btn btn-link'><i className="fa fa-expand"></i></button>
                   <figure className='image-wrapper'>
                     <img src="./images/birds-eye-london.png" />
                     <figcaption>A bird's eye view of London</figcaption>
                   </figure>
+                  <p>blah blah</p>
                 </div>
               </div>
             </div>
         </div>
       </div>
-
-
-
     )
   }
-})
-
-var LeftListItem = React.createClass({
-  render: ()=> {
-    return (
-      <li className="left-menu-item">
-      </li>
-    )
-  }
-})
+});
 
 var Lyrics = React.createClass({
-  render: function() {
+  render : function() {
     return (
         <div className='col-xs-1 col-md-5 col-lg-6'>
             <div className='lyrics-text'>
@@ -114,6 +126,6 @@ var Lyrics = React.createClass({
         </div>
     )
   }
-})
+});
 
 ReactDOM.render(<App/>, document.querySelector('#content-wrapper'));
