@@ -16,25 +16,53 @@ var App = React.createClass({
   render : function() {
     return (
       <div className="react-wrapper">
-        <nav>
-          <span className="logo"></span>
+        <nav className="clearfix">
+          <img src='./images/flocabulary-logo.png' />
+          <ul className="left-tertiary-nav">
+            <li>Songs & Videos</li>
+            <li>About</li>
+            <li className="search-field">Search</li>
+          </ul>
+          <ul className="right-tertiary-nav">
+            <li className="join-class">Join a Class</li>
+            <li className="sign-in">Sign In</li>
+            <li className="sign-up">Sign Up</li>
+          </ul>
         </nav>
         <header className='main-header'>
           <span className='header-breadcrumbs'>Songs & Videos &gt; Language Arts &gt; Reading & Writing &gt; </span>
           <h1>Five Elements of a Story</h1>
           <p>"Five Things"</p>
         </header>
-        <div className='row'>
+        <div className='main-content row'>
             <div className='left-menu col-xs-4 col-md-2 col-md-offset-1 col-lg-2'>
               <ul>
                 <li>Video</li>
                 <li>Quick Review</li>
                 <li>Interactive Lyrics</li>
+                <li>Fill in the Blanks</li>
+                <li>Quiz</li>
+                <hr />
+                <li>Teacher's Guide</li>
+                <li>Handouts</li>
+                <hr />
+                <li>Credits</li>
               </ul>
             </div>
             <div className='col-md-8 col-lg-8'>
-              <div className=''>Video playback controls</div>
-              <Lyrics />
+              <div className='video-playback'></div>
+              <div className='row'>
+                <Lyrics />
+                <div className='right-panel col-xs-1 col-md-4'>
+                  <span className='image-browser'></span>
+                  <span className='pagination'>1 of 10</span>
+                  <button className='button-toggle-fullscreen'>Expand</button>
+                  <figure className='image-wrapper'>
+                    <img src="./images/birds-eye-london.png" />
+                    <figcaption>A bird's eye view of London</figcaption>
+                  </figure>
+                </div>
+              </div>
             </div>
         </div>
       </div>
@@ -45,12 +73,20 @@ var App = React.createClass({
   }
 })
 
+var LeftListItem = React.createClass({
+  render: ()=> {
+    return (
+      <li className="left-menu-item">
+      </li>
+    )
+  }
+})
+
 var Lyrics = React.createClass({
   render: function() {
     return (
-      <div className='row'>
         <div className='col-xs-1 col-md-5 col-lg-6'>
-            <div className='lyrics'>
+            <div className='lyrics-text'>
                   Setting, that's like where it's going down, <br/>
                   Could be the train compartment, a castle or a town,  <br/>
                   Could be the Arctic winter - like "To Build a Fire,"  <br/>
@@ -76,8 +112,6 @@ var Lyrics = React.createClass({
                   It could be crazy, wild or straight wicked. <br/>
             </div>
         </div>
-      </div>
-
     )
   }
 })
