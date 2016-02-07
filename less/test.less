@@ -2,15 +2,17 @@
 @color-text: #181828;
 @color-text-light: #979799;
 @black: rgba(0,0,0,1);
-@proxima: "proxima nova";
-@proxima-bold: "proxima nova bold";
-@proxima-black: "proxima nova black";
+@color-flocab-blue: #018ED5;
 
 @color-border: #E6E6E6;
 @color-border-dark: #222222;
 @color-border-light: #EEEEEE;
 @header-font-color: white;
 @left-menu-bg: #f2f2f2;
+
+@proxima: "proxima nova";
+@proxima-bold: "proxima nova bold";
+@proxima-black: "proxima nova black";
 
 .subtle-text-shadow(@string: 1px 1px 2px rgba(0, 0, 0, 0.25)) {
 	text-shadow: @string;
@@ -53,7 +55,6 @@ header.main-header {
   span.header-breadcrumbs {
     color: fade(white, 50%);
     .subtle-text-shadow();
-    border: 1px solid navy;
   }
   h1 {
     font-weight: 800;
@@ -67,9 +68,24 @@ header.main-header {
 }
 .left-menu {
   background-color: @left-menu-bg;
-  padding: 1em 0.7em;
+  padding: 1em 0;
   ul {
+    //display: table;
     list-style-type: none;
+    //box-sizing:border-box;
+    //-moz-box-sizing:border-box;
+    //-webkit-box-sizing:border-box;
+    li {
+      //display: table-cell;
+      font-weight: 600;
+      size: 1em;
+      border: 0px solid navy;
+      padding-left: 2em;
+      line-height: 2.2em;
+      &:hover {
+        background-color: darken(@left-menu-bg, 5%);
+      }
+    }
   }
   hr {
     margin: 0.7em 0;
@@ -87,10 +103,25 @@ header.main-header {
   }
 }
 
-
 .video-playback {
   width: image-width('../images/video-playback.png');
   height: image-height('../images/video-playback.png');
   background-image: url('../images/video-playback.png');
   margin-bottom: 2em;
+}
+
+.right-panel {
+  border: 1px solid navy;
+  figcaption {
+    font-style: italic;
+    margin: 0.2em 0;
+  }
+  button {
+    color: @color-flocab-blue;
+    position: absolute;
+    right: 0;
+    .fa {
+      font-size: 2em;
+    }
+  }
 }
