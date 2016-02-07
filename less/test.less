@@ -1,34 +1,72 @@
 @color-goodGreen: #55A003;
 @color-text: #181828;
 @color-text-light: #979799;
+@black: rgba(0,0,0,1);
 @proxima: "proxima nova";
+@proxima-bold: "proxima nova bold";
+@proxima-black: "proxima nova black";
 
 @color-border: #E6E6E6;
 @color-border-dark: #222222;
 @color-border-light: #EEEEEE;
+@header-font-color: white;
+@left-menu-bg: #f2f2f2;
+
+.subtle-text-shadow(@string: 1px 1px 2px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
 
 body {
   color: @color-text;
   font-family: @proxima;
 }
+
 header.main-header {
   background-color: @color-goodGreen;
+  size: 2em;
+  color: @header-font-color;
+  padding: 1em 3em;
+  span.header-breadcrumbs {
+    color: fade(white, 50%);
+    .subtle-text-shadow();
+    border: 1px solid navy;
+  }
+  h1 {
+    font-weight: 800;
+    margin: 0.2em 0;
+    color: @header-font-color;
+
+  }
+}
+.main-content {
+  margin-top: 1.8em;
+}
+.left-menu {
+  background-color: @left-menu-bg;
+  padding: 1em 0.7em;
+  ul {
+    list-style-type: none;
+  }
+  hr {
+    margin: 0.7em 0;
+    border-top: 2px solid silver;
+  }
 }
 
-/*
-@base: #f938ab;
-
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  -webkit-box-shadow: @style @c;
-  box-shadow:         @style @c;
-}
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
+.image-wrapper {
+  figure {
+    display: table;
+    width: 1px;
+  }
+  img, figcaption {
+    display: table-row;
+  }
 }
 
-*/
+
+.video-playback {
+  width: image-width('../images/video-playback.png');
+  height: image-height('../images/video-playback.png');
+  background-image: url('../images/video-playback.png');
+  margin-bottom: 2em;
+}
