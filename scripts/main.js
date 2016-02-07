@@ -9,14 +9,19 @@ var App = React.createClass({
     }
   },
   toggleFullScreen : function() {
-    this.setState({
-      expanded : !this.state.expanded,
-    })
+    this.setState({ expanded : !this.state.expanded });
   },
   render : function() {
-    return (
-      <ThreeColumnLayout />
-    )
+    if (!this.state.expanded) {
+      return (
+        <ThreeColumnLayout toggleFullScreen={this.toggleFullScreen}/>
+      )
+    } else {
+      return (
+        <SinglePanelOnly toggleFullScreen={this.toggleFullScreen}/>
+      )
+
+    }
   }
 });
 var LeftListItem = React.createClass({
@@ -31,6 +36,10 @@ var SinglePanelOnly = React.createClass({
   render : function() {
     return (
       <div className=''>
+        <h1>poof!</h1>
+        <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
+            <i className="fa fa-expand"></i>EXPAND/CLOSE
+        </button>
       </div>
     )
   }
@@ -79,7 +88,9 @@ var ThreeColumnLayout = React.createClass({
                 <div className='right-panel col-xs-1 col-md-4'>
                   <span className='image-browser'></span>
                   <span className='pagination'>1 of 10</span>
-                  <button className='button-toggle-fullscreen btn btn-link'><i className="fa fa-expand"></i></button>
+                  <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
+                    <i className="fa fa-expand"></i>EXPAND/CLOSE
+                  </button>
                   <figure className='image-wrapper'>
                     <img src="./images/birds-eye-london.png" />
                     <figcaption>A bird's eye view of London</figcaption>
