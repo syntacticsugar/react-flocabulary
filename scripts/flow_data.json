@@ -1,0 +1,7 @@
+module.exports = {
+  li_1 : {
+    text : 'Video',
+    icon : '',
+    url : ''
+  },
+}
