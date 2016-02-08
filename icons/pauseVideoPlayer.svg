@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="svgIcon pauseVideoPlayer" viewBox="0 0 24 24">
+	<path fill="#FFFFFF" d="M9,22H5c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1v18C10,21.6,9.6,22,9,22z"/>
+	<path fill="#FFFFFF" d="M19,22h-4c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1v18C20,21.6,19.6,22,19,22z"/>
+</svg>
+

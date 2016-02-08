@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="svgIcon incorrectBadge" viewBox="0 0 48 48">
+	<circle fill="#D3D3D3" cx="24" cy="24" r="24"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="33" x2="33" y2="15"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="33" y1="33" x2="15" y2="15"/>
+</svg>
