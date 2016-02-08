@@ -2,6 +2,9 @@
 
 Use the delivered image/screenshot and turn it into clickable CSS, and use JS to create a fullscreen toggle.
 
+Click [here for the finished project] (http://syntacticsugar.github.io/react-flocabulary/ "Flocabulary 3-Column-Layout")
+
+The first thing I did was draw on a piece of paper a rough mockup, or *"wireframe"* of the React component tree: [here is the picture I took with my cell phone] (http://syntacticsugar.github.io/react-flocabulary/images/2016-02-08__flocabulary.jpg "Pencil drawing") 
 
 ## Questions
 
