@@ -18,7 +18,7 @@ var App = React.createClass({
       )
     } else {
       return (
-        <SinglePanelOnly toggleFullScreen={this.toggleFullScreen}/>
+        <AuxiliaryPanel imageFullSize={true} toggleFullScreen={this.toggleFullScreen}/>
       )
 
     }
@@ -32,6 +32,9 @@ var LeftListItem = React.createClass({
     )
   }
 });
+
+/*
+// not using this anymore
 var SinglePanelOnly = React.createClass({
   render : function() {
     return (
@@ -41,10 +44,15 @@ var SinglePanelOnly = React.createClass({
         <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
             <i className="fa fa-expand"></i>EXPAND/CLOSE
         </button>
+        <p>
+          London is the capital ...
+        </p>
       </div>
     )
   }
 });
+*/
+
 var ThreeColumnLayout = React.createClass({
   render : function() {
     return (
@@ -63,14 +71,14 @@ var ThreeColumnLayout = React.createClass({
           </ul>
         </nav>
         <header className='main-header'>
-          <span className='header-breadcrumbs'>Songs & Videos &gt; Language Arts &gt; Reading & Writing &gt; </span>
+          <span className='header-breadcrumbs'>Songs & Videos &gt; Language Arts &gt; Reading & Writing &gt; Five Elements of a Story</span>
           <h1>Five Elements of a Story</h1>
           <p>"Five Things"</p>
         </header>
         <div className='main-content row'>
             <div className='left-menu col-xs-4 col-md-2 col-md-offset-1 col-lg-2'>
               <ul className="nav nav-stacked">
-                <li>Video</li>
+                <li><i className="fa fa-apple"></i>Video</li>
                 <li>Quick Review</li>
                 <li>Interactive Lyrics</li>
                 <li>Fill in the Blanks</li>
@@ -86,22 +94,8 @@ var ThreeColumnLayout = React.createClass({
               <div className='video-playback'></div>
               <div className='row'>
                 <Lyrics />
-                <div className='right-panel col-xs-1 col-md-4'>
-                  <div className="meta-details">
-                    <span className='image-browser'>
-                      <a href='#'><i className="fa fa-angle-left"></i></a>
-                      <a href='#'><i className="fa fa-angle-right"></i></a>
-                    </span>
-                    <span className='pagination'>1 of 10</span>
-                    <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
-                      <i className="fa fa-expand"></i>
-                    </button>
-                  </div>
-                  <figure className='image-wrapper'>
-                    <img src="./images/birds-eye-london.png" />
-                    <figcaption>A bird's eye view of London</figcaption>
-                  </figure>
-                  <p>blah blah</p>
+                <div className='col-xs-1 col-md-4'>
+                  <AuxiliaryPanel imageFullSize={false} toggleFullScreen={this.props.toggleFullScreen} />
                 </div>
               </div>
             </div>
@@ -110,7 +104,36 @@ var ThreeColumnLayout = React.createClass({
     )
   }
 });
-
+var AuxiliaryPanel = React.createClass({
+  render : function() {
+    if (this.props.imageFullSize) {
+      var imageClass="largerImage";
+    } else {
+      var imageClass="smallerImage";
+    }
+    return (
+      <div className="auxiliary-panel">
+        <div className="meta-details">
+          <span className='image-browser'>
+            <a href='#'><i className="fa fa-angle-left"></i></a>
+            <a href='#'><i className="fa fa-angle-right"></i></a>
+          </span>
+          <span className='pagination'>1 of 10</span>
+          <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
+            <i className="fa fa-expand"></i>
+          </button>
+        </div>
+        <figure className='image-wrapper'>
+          <img className={imageClass} src="./images/london-huge.jpg" />
+          <figcaption>A bird's eye view of London</figcaption>
+        </figure>
+        <p>
+          London is the capital and most populous city of England and the United Kingdom.[3][4] Standing on the River Thames, London has been a major settlement for two millennia. It was founded by the Romans, who named it Londinium.[5] London's ancient core, the City of London, largely retains its 1.12-square-mile (2.9 km2) medieval boundaries and in 2011 had a resident population of 7,375, making it the smallest city in England. Since at least the 19th century, the term London has also referred to the metropolis developed around this core.[6] The bulk of this conurbation forms Greater London,[7][8][note 1] a region of England governed by the Mayor of London and the London Assembly.[9][note 2] The conurbation also covers two English counties: the small district of the City of London and the county of Greater London. The latter constitutes the vast majority of London,[10] though historically it was split between Middlesex (a now abolished county), Essex, Surrey, Kent and Hertfordshire.
+        </p>
+      </div>
+    )
+  }
+});
 var Lyrics = React.createClass({
   render : function() {
     return (
