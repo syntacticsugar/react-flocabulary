@@ -78,14 +78,14 @@ var ThreeColumnLayout = React.createClass({
         <div className='main-content row'>
             <div className='left-menu col-xs-12 col-sm-3 col-md-3 col-md-offset-1 col-lg-2'>
               <ul className="nav nav-stacked">
-                <li><i className="fa fa-apple"></i>Video</li>
-                <li>Quick Review</li>
-                <li>Interactive Lyrics</li>
-                <li>Fill in the Blanks</li>
-                <li>Quiz</li>
+                <li><img src="icons/video.svg" />Video</li>
+                <li><img src="icons/challengeQuestions.svg" />Quick Review</li>
+                <li><img src="icons/interactiveLyrics.svg" />Interactive Lyrics</li>
+                <li><img src="icons/fillInTheBlanks.svg" /> Fill in the Blanks</li>
+                <li><img src="icons/print.svg" /> Quiz</li>
                 <hr />
-                <li>Teacher's Guide</li>
-                <li>Handouts</li>
+                <li><img src="icons/subject_all.svg" /> Teacher's Guide</li>
+                <li><img src="icons/print.svg" /> Handouts</li>
                 <hr />
                 <li>Credits</li>
               </ul>
