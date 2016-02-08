@@ -137,7 +137,7 @@ var AuxiliaryPanel = React.createClass({
 var Lyrics = React.createClass({
   render : function() {
     return (
-        <div className='col-xs-12 col-sm-7 col-md-6 col-lg-6'>
+        <div className='col-xs-12 col-sm-7 col-md-7 col-lg-7'>
             <div className='lyrics-text'>
                   <a href='#'>Setting, that's like where it's going down,</a> <br/>
                   Could be the train compartment, a castle or a town,  <br/>

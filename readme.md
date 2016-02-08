@@ -19,3 +19,4 @@ During my coding process, I ran into some interesting questions wondering how so
 3. <strike>add icons to left menu</strike>
 4. `inline-block` on anchor links of `ul.right-tertiary` glitch
 5. Video not responsive
+6. Adds fallback font, though not happy with it.
