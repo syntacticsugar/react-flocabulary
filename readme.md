@@ -15,5 +15,7 @@ During my coding process, I ran into some interesting questions wondering how so
 
 ## Issues
 1. Had some trouble vertical aligning a couple things, I got the alignment alright in most areas, but in the righter-most panel, I had to use an extra line to align the "1 of 10" pagination text.
-2. Did not make the page fully responsive; it was low on my priority
-3. add icons to left menu
+2. <strike>Did not make the page fully responsive; it was low on my priority</strike>
+3. <strike>add icons to left menu</strike>
+4. `inline-block` on anchor links of `ul.right-tertiary` glitch
+5. Video not responsive
