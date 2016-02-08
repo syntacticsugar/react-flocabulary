@@ -51,14 +51,14 @@ var ThreeColumnLayout = React.createClass({
         <nav className="clearfix">
           <img src='./images/flocabulary-logo.png' />
           <ul className="left-tertiary-nav">
-            <li>Songs & Videos</li>
-            <li>About</li>
+            <li className='dropdown'>Songs & Videos<span className="caret"></span></li>
+            <li>About<span className="caret"></span></li>
             <li className="search-field">Search</li>
           </ul>
           <ul className="right-tertiary-nav">
-            <li className="join-class">Join a Class</li>
-            <li className="sign-in">Sign In</li>
-            <li className="sign-up">Sign Up</li>
+            <li className="join-class"><a href='#'>Join a Class</a></li>
+            <li className="sign-in"><a href='#'>Sign In</a></li>
+            <li className="sign-up"><a href='#'>Sign Up</a></li>
           </ul>
         </nav>
         <header className='main-header'>
@@ -110,7 +110,7 @@ var Lyrics = React.createClass({
     return (
         <div className='col-xs-1 col-md-5 col-lg-6'>
             <div className='lyrics-text'>
-                  Setting, that's like where it's going down, <br/>
+                  <a href='#'>Setting, that's like where it's going down,</a> <br/>
                   Could be the train compartment, a castle or a town,  <br/>
                   Could be the Arctic winter - like "To Build a Fire,"  <br/>
                   The temperature's dropping, excitement is getting higher,  <br/>
@@ -125,7 +125,7 @@ var Lyrics = React.createClass({
                   When you're reading or writing <br/>
                   A short story that's mad exciting. (x2)  <br/><br/>
 
-                  Plot is the action, the quest for satisfaction, <br/>
+                  <a href='#'>Plot is the action, the quest for satisfaction, </a><br/>
                   What's going down, what's going to happen. <br/>
                   Four men at sea in an open boat, <br/>
                   Rowing and hoping that they can stay afloat. The plot:  <br/>
