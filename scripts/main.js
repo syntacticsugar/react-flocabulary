@@ -54,7 +54,7 @@ var ThreeColumnLayout = React.createClass({
           <ul className="left-tertiary-nav">
             <li className='dropdown'>Songs & Videos<span className="caret"></span></li>
             <li>About<span className="caret"></span></li>
-            <li className="search-field">Search</li>
+            <li className="search-field"><i className="fa fa-search"></i></li>
           </ul>
           <ul className="right-tertiary-nav">
             <li className="join-class"><a href='#'>Join a Class</a></li>
@@ -87,14 +87,16 @@ var ThreeColumnLayout = React.createClass({
               <div className='row'>
                 <Lyrics />
                 <div className='right-panel col-xs-1 col-md-4'>
-                  <span className='image-browser'>
-                    <a href='#'><i className="fa fa-angle-left"></i></a>
-                    <a href='#'><i className="fa fa-angle-right"></i></a>
-                  </span>
-                  <span className='pagination'>1 of 10</span>
-                  <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
-                    <i className="fa fa-expand"></i>EXPAND/CLOSE
-                  </button>
+                  <div className="meta-details">
+                    <span className='image-browser'>
+                      <a href='#'><i className="fa fa-angle-left"></i></a>
+                      <a href='#'><i className="fa fa-angle-right"></i></a>
+                    </span>
+                    <span className='pagination'>1 of 10</span>
+                    <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
+                      <i className="fa fa-expand"></i>
+                    </button>
+                  </div>
                   <figure className='image-wrapper'>
                     <img src="./images/birds-eye-london.png" />
                     <figcaption>A bird's eye view of London</figcaption>
