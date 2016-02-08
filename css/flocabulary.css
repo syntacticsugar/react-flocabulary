@@ -108,9 +108,8 @@ header.main-header h1 {
   display: table-row;
 }
 .video-playback {
-  width: 768px;
+  background-color: black;
   height: 40px;
-  background-image: url('../images/video-playback.png');
   margin-bottom: 2em;
 }
 .auxiliary-panel .meta-details {

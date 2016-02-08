@@ -76,7 +76,7 @@ var ThreeColumnLayout = React.createClass({
           <p>"Five Things"</p>
         </header>
         <div className='main-content row'>
-            <div className='left-menu col-xs-4 col-md-2 col-md-offset-1 col-lg-2'>
+            <div className='left-menu col-xs-12 col-sm-3 col-md-3 col-md-offset-1 col-lg-2'>
               <ul className="nav nav-stacked">
                 <li><i className="fa fa-apple"></i>Video</li>
                 <li>Quick Review</li>
@@ -94,7 +94,7 @@ var ThreeColumnLayout = React.createClass({
               <div className='video-playback'></div>
               <div className='row'>
                 <Lyrics />
-                <div className='col-xs-1 col-md-4'>
+                <div className='col-xs-12 col-md-4 col-lg-4'>
                   <AuxiliaryPanel imageFullSize={false} toggleFullScreen={this.props.toggleFullScreen} />
                 </div>
               </div>
@@ -137,7 +137,7 @@ var AuxiliaryPanel = React.createClass({
 var Lyrics = React.createClass({
   render : function() {
     return (
-        <div className='col-xs-1 col-md-5 col-lg-6'>
+        <div className='col-xs-12 col-sm-7 col-md-6 col-lg-6'>
             <div className='lyrics-text'>
                   <a href='#'>Setting, that's like where it's going down,</a> <br/>
                   Could be the train compartment, a castle or a town,  <br/>
