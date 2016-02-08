@@ -35,8 +35,9 @@ var LeftListItem = React.createClass({
 var SinglePanelOnly = React.createClass({
   render : function() {
     return (
-      <div className=''>
+      <div className='expanded-view'>
         <h1>poof!</h1>
+        <img src="./images/london-huge.jpg" />
         <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
             <i className="fa fa-expand"></i>EXPAND/CLOSE
         </button>
@@ -86,7 +87,10 @@ var ThreeColumnLayout = React.createClass({
               <div className='row'>
                 <Lyrics />
                 <div className='right-panel col-xs-1 col-md-4'>
-                  <span className='image-browser'></span>
+                  <span className='image-browser'>
+                    <a href='#'><i className="fa fa-angle-left"></i></a>
+                    <a href='#'><i className="fa fa-angle-right"></i></a>
+                  </span>
                   <span className='pagination'>1 of 10</span>
                   <button onClick={this.props.toggleFullScreen} className='button-toggle-fullscreen btn btn-link'>
                     <i className="fa fa-expand"></i>EXPAND/CLOSE
